@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./styling/Smurfs.css";
 
 export default class SmurfForm extends Component {
   state = {
@@ -53,7 +54,7 @@ export default class SmurfForm extends Component {
             value={this.state.smurf.height}
             name="height"
           />
-          <button type="submit">Add to the village</button>
+          <button type="submit">Add To Your Village!</button>
         </form>
       </div>
     );
