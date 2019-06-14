@@ -1,3 +1,11 @@
-.App {
+.AppContainer {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.smurfs {
+  display: flex;
+  border: 1px solid green;
 }
