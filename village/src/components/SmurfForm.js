@@ -31,10 +31,12 @@ export default class SmurfForm extends Component {
         height: ""
       }
     });
+    this.props.history.push("/");
   };
   render() {
     return (
       <div className="SmurfForm">
+        <h1>Name your Smurf!</h1>
         <form onSubmit={this.handleSubmit}>
           <input
             onChange={this.changeHandler}

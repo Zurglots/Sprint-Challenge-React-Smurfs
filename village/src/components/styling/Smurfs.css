@@ -1,25 +1,55 @@
 .Smurfs {
   display: flex;
   flex-direction: column;
-  border: 1px solid green;
+  /* border: 1px solid green; */
   justify-content: center;
+  background: #fffdf5;
+}
+
+.navlink {
+  display: flex;
+  margin: 15px;
+  height: 50px;
+  width: 150px;
+  justify-items: center;
+  align-items: center;
+  background: #0fa8eb;
+  border-radius: 15px;
+}
+
+a {
+  margin: 0 auto;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  color: #fafafa;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .smurf {
   display: flex;
   align-self: center;
-  border: 2px solid orange;
+  /* border: 2px solid orange; */
   justify-content: center;
-  margin: 0 auto;
+  margin: 15px auto;
   max-width: 400px;
   max-height: 300px;
-  background: #fafafa;
+  background: #0fa8eb;
   border-radius: 15px;
+  color: #fafafa;
 }
 
 h1 {
   align-content: center;
-  margin: 0 auto;
+  margin: 15px auto;
 }
 
 .SmurfForm {
@@ -30,22 +60,28 @@ h1 {
 
 form {
   text-decoration: none;
-  margin: auto;
+  margin: 15px auto;
   display: flex;
   flex-direction: column;
+  box-shadow: none;
 }
 
 input {
   border-radius: 5px;
   text-align: center;
+  margin: 5px auto;
+  border-style: solid;
 }
 
 button {
   margin: 15px;
   border-radius: 15px;
   /* text-decoration: none; */
-  background-color: aqua;
+  background-color: #0fa8eb;
   font-weight: bold;
   font-stretch: expanded;
   height: 50px;
+  color: #fafafa;
+  border: none;
+  border-color: 1px solid black;
 }
