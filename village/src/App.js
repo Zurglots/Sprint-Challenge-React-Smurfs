@@ -4,6 +4,7 @@ import { Route, withRouter } from "react-router-dom";
 import "./App.css";
 import SmurfForm from "./components/SmurfForm";
 import Smurfs from "./components/Smurfs";
+import Nav from "./components/Nav";
 import axios from "axios";
 
 class App extends Component {
@@ -39,7 +40,8 @@ class App extends Component {
   // You'll need to make sure you have the right properties on state and pass them down to props.
   render() {
     return (
-      <div className="App">
+      <div className="AppContainer">
+        <Nav />
         <Route
           exact
           path="/"
