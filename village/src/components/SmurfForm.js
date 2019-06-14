@@ -1,50 +1,56 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-class SmurfForm extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: '',
-      age: '',
-      height: ''
-    };
-  }
-
-  addSmurf = event => {
-    event.preventDefault();
-    // add code to create the smurf using the api
-
-    this.setState({
-      name: '',
-      age: '',
-      height: ''
-    });
-  }
-
-  handleInputChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
+export default class SmurfForm extends Component {
+  state = {
+    smurf: {
+      name: "",
+      age: "",
+      height: ""
+    }
   };
 
+  changeHandler = e => {
+    e.persist();
+    this.setState({
+      smurf: {
+        ...this.state.smurf,
+        [e.target.name]: e.target.value
+      }
+    });
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+    console.log(this.state.smurf);
+    this.props.addSmurf(this.state.smurf);
+    this.setState({
+      smurf: {
+        name: "",
+        age: "",
+        height: ""
+      }
+    });
+  };
   render() {
     return (
       <div className="SmurfForm">
-        <form onSubmit={this.addSmurf}>
+        <form onSubmit={this.handleSubmit}>
           <input
-            onChange={this.handleInputChange}
+            onChange={this.changeHandler}
             placeholder="name"
-            value={this.state.name}
+            value={this.state.smurf.name}
             name="name"
           />
           <input
-            onChange={this.handleInputChange}
+            onChange={this.changeHandler}
             placeholder="age"
-            value={this.state.age}
+            value={this.state.smurf.age}
             name="age"
           />
           <input
-            onChange={this.handleInputChange}
+            onChange={this.changeHandler}
             placeholder="height"
-            value={this.state.height}
+            value={this.state.smurf.height}
             name="height"
           />
           <button type="submit">Add to the village</button>
@@ -53,5 +59,3 @@ class SmurfForm extends Component {
     );
   }
 }
-
-export default SmurfForm;
